@@ -15,7 +15,7 @@ query userageQurey($id: Int,$gender:String,$age:String,$first_name:String,$last_
 `
 const array = (user)=>user.map((data,i)=>{
   return  <li key={i}>
-  ID: {data.id} NAME: {data.fist_name}  {data.last_name}  AGE: {data.age} EMAIL: {data.email}
+  ID: {data.id} NAME: {data.first_name}  {data.last_name}  AGE: {data.age} EMAIL: {data.email}
 </li>
 })
 

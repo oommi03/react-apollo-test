@@ -8,7 +8,7 @@ class Root extends Component {
             id:1,
             gender:null,
             email:null,
-            fist_name:null,
+            first_name:null,
             last_name:null,
             age:null,
             selected:'id',
@@ -20,23 +20,23 @@ class Root extends Component {
 
         if(this.state.selected=='id'){
             
-            this.setState({value:event.target.value,id:Number(event.target.value),gender:null,email:null,fist_name:null,last_name:null,age:null})
+            this.setState({value:event.target.value,id:Number(event.target.value),gender:null,email:null,first_name:null,last_name:null,age:null})
         
         }else if(this.state.selected=='gender'){
         
-            this.setState({value:event.target.value,id:null,email:null,fist_name:null,last_name:null,age:null,gender:event.target.value})
+            this.setState({value:event.target.value,id:null,email:null,first_name:null,last_name:null,age:null,gender:event.target.value})
         }else if (this.state.selected=='email'){
-            this.setState({value:event.target.value,id:null,email:event.target.value,gender:null,fist_name:null,last_name:null,age:null})
+            this.setState({value:event.target.value,id:null,email:event.target.value,gender:null,first_name:null,last_name:null,age:null})
           
-        }else if (this.state.selected=='fist_name'){
-            this.setState({value:event.target.value,id:null,fist_name:event.target.value,gender:null,email:null,last_name:null,age:null})
-            this.setState({fist_name:this.state.value})
+        }else if (this.state.selected=='first_name'){
+            this.setState({value:event.target.value,id:null,first_name:event.target.value,gender:null,email:null,last_name:null,age:null})
+       
         }else if (this.state.selected=='last_name'){
-            this.setState({value:event.target.value,id:null,last_name:event.target.value,email:null,fist_name:null,gender:null,age:null})
-            this.setState({value:this.state.value})
+            this.setState({value:event.target.value,id:null,last_name:event.target.value,email:null,first_name:null,gender:null,age:null})
+
         }else if(this.state.selected=='age'){
             
-            this.setState({value:event.target.value,age:event.target.value,gender:null,email:null,fist_name:null,last_name:null,id:null})
+            this.setState({value:event.target.value,age:event.target.value,gender:null,email:null,first_name:null,last_name:null,id:null})
             
         }
     }
@@ -58,11 +58,11 @@ class Root extends Component {
   <option  value="id">id</option>
   <option value="gender">gender</option>
   <option  value="email">email</option>
-  <option  value="fist_name">fist_name</option>
+  <option  value="first_name">first_name</option>
   <option value="last_name">last_name</option>
   <option value="age">age</option>
 </select>
-            <App id={this.state.id} fist_name={this.state.fist_name} last_name={this.state.last_name} age={this.state.age} gender={this.state.gender} email={this.state.email} />
+            <App id={this.state.id} first_name={this.state.first_name} last_name={this.state.last_name} age={this.state.age} gender={this.state.gender} email={this.state.email} />
             </div>
             </div>
         )
